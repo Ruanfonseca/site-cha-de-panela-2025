@@ -148,6 +148,16 @@ html {
   margin: 0 auto 10px auto;
   border: 3px solid #fff;
 }
+.cor span,
+.cor img {
+  display: block;
+  width: 70px; /* mesmo tamanho do span */
+  height: 70px;
+  border-radius: 50%; /* mantém formato circular */
+  margin: 0 auto 10px auto;
+  border: 3px solid #ddd; /* mesma borda dos spans */
+  object-fit: cover; /* garante que a imagem se ajuste ao círculo */
+}
 
 /* Inspirações */
 .inspiracoes {
