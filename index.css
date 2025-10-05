@@ -61,9 +61,10 @@ html {
 
 /* ======= Nossa História ======= */
 .firstsection {
-  background-color: #fff8e7; /* bege suave */
+  background-color: #fde8cc;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
+  margin-bottom: 0; /* impede espaçamento extra */
 }
 
 .section-title {
@@ -95,7 +96,7 @@ html {
 }
 
 .images img {
-  width: 250px;
+  width: 500px;
   height: auto;
   border: 4px solid #5a3a2e; /* marrom */
   border-radius: 5px;
@@ -103,7 +104,7 @@ html {
 
 /* ======= Lista de Presentes ======= */
 .secondsection {
-  background-color: #7b3f00; /* marrom */
+  background-color: #802c0e; /* marrom */
   text-align: center;
   padding: 10px 20px;
 }
@@ -111,7 +112,7 @@ html {
 .second-title {
   font-family: "Gulzar", serif;
   font-size: 70px;
-  color: #f57c00;
+  color: #f7d29e;
   margin-bottom: 20px;
 }
 
@@ -122,7 +123,7 @@ html {
   line-height: 1.2;
   text-align: center;
   margin: 0;
-  color: #fffadd;
+  color: #f7d29e;
 }
 
 /* Paleta de cores */
@@ -168,16 +169,13 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #f57c00;
+  color: #f7d29e;
   margin-bottom: 20px;
 }
 
 .opcoes img {
   max-width: 600px;
   width: 100%;
-  border: 5px solid #f57c00;
-  border-radius: 10px;
-  margin-bottom: 30px;
 }
 
 /* Botão */
@@ -198,10 +196,87 @@ html {
 .btn-lista:hover {
   background-color: #d66c00;
 }
+/* ======= Nossa História (nova versão com círculos e linha) ======= */
+.firstsection {
+  background-color: #fff2e0;
+  text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 0; /* impede espaçamento extra */
+}
+
+.section-title {
+  font-family: "Gulzar", serif;
+  color: #d25b00;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #7a3d00;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: 5px solid #b24d00;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.line {
+  width: 80px;
+  height: 4px;
+  background-color: #b24d00;
+}
+
+/* ===== Responsividade ===== */
+
+/* ======= Sobre o Chá de Bênçãos ======= */
+.aboutsection {
+  background-color: #f7d29e;
+  text-align: center;
+  padding: 10px 10px;
+  margin-bottom: 0;
+}
+
+.about-title {
+  font-family: "Gulzar", serif;
+  font-size: 60px;
+  color: #ee5e04; /* Laranja queimado */
+}
+
+.about-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #af431d; /* Marrom suave */
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
 
 /* ======= Vista-se com a nossa paleta ======= */
 .thirdsection {
-  background-color: #fff8e7; /* bege clarinho */
+  background-color: #fde8cc; /* bege clarinho */
   text-align: center;
   padding: 60px 20px;
 }
@@ -209,7 +284,7 @@ html {
 .third-title {
   font-family: "Gulzar", serif;
   font-size: 70px;
-  color: #ee7a13;
+  color: #ee5e04;
   margin-bottom: 15px;
 }
 
@@ -219,7 +294,7 @@ html {
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto 40px auto;
-  color: #5a3a2e;
+  color: #af431d;
 }
 
 /* Paleta de cores */
@@ -267,7 +342,41 @@ html {
 }
 
 /* ================= RESPONSIVIDADE ================= */
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 40px;
+  }
 
+  .about-text {
+    font-size: 18px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .line {
+    width: 4px;
+    height: 40px;
+  }
+
+  .circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .section-text {
+    font-size: 18px;
+  }
+}
 /* 📱 Celulares */
 @media (max-width: 600px) {
   .title-gulzar {
