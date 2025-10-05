@@ -224,8 +224,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
   flex-wrap: wrap;
+  gap: 0; /* remove o espaçamento entre elementos */
 }
 
 .circle {
@@ -244,9 +244,10 @@ html {
 }
 
 .line {
-  width: 80px;
-  height: 4px;
+  width: 60px; /* comprimento do traço */
+  height: 5px;
   background-color: #b24d00;
+  margin: 0 -2px; /* sobreposição leve para encostar nos círculos */
 }
 
 /* ===== Responsividade ===== */
@@ -261,7 +262,7 @@ html {
 
 .about-title {
   font-family: "Gulzar", serif;
-  font-size: 60px;
+  font-size: 40px;
   color: #ee5e04; /* Laranja queimado */
 }
 
@@ -345,7 +346,7 @@ html {
 /* Responsivo */
 @media (max-width: 768px) {
   .about-title {
-    font-size: 40px;
+    font-size: 1.8rem;
   }
 
   .about-text {
@@ -377,10 +378,49 @@ html {
     font-size: 18px;
   }
 }
+/* ======= Timeline - Desktop ======= */
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0; /* sem espaço entre círculos e linhas */
+}
+
+.line {
+  width: 60px;
+  height: 5px;
+  background-color: #b24d00;
+  margin: 0 -2px; /* encosta levemente nos círculos */
+}
+
+/* ======= Responsivo (até 768px) ======= */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* remove espaçamento entre itens */
+  }
+
+  .line {
+    width: 5px;
+    height: 60px;
+    margin: -2px 0; /* sobreposição leve para encostar nos círculos */
+  }
+
+  .circle {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 /* 📱 Celulares */
 @media (max-width: 600px) {
   .title-gulzar {
     font-size: 60px;
+  }
+  .about-title {
+    font-size: 1.8rem;
   }
 
   .subtitle-greatvibes {
@@ -455,6 +495,9 @@ html {
 @media (min-width: 601px) and (max-width: 1024px) {
   .title-gulzar {
     font-size: 90px;
+  }
+  .about-title {
+    font-size: 1.8rem;
   }
 
   .section-title {
